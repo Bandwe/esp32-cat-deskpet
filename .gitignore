@@ -7,6 +7,19 @@ DeskPetConfig.local.h
 *.pem
 *.key
 !tools/tests/isrgrootx1_r18.pem
+# Real server operations stay private. Generic server source/examples are allowed.
+/server/deploy/
+/server/preview/
+/server/tools/verify_live_auth.py
+/server/tools/rotate_owner_password.py
+.ssh/
+known_hosts
+id_rsa*
+id_ed25519*
+*.ppk
+*.pfx
+*.p12
+*.tfstate*
 # Runtime data and personal history.
 backups/
 logs/

@@ -2,6 +2,13 @@
 
 - Never commit `.env`, Wi-Fi passwords, pairing tokens, session secrets,
   passwords or password hashes from a real deployment.
+- Website application source and generic deployment examples may be public;
+  real server infrastructure and access details must remain private. Never
+  publish production domains/IPs, SSH access settings, panel URLs, account
+  details, private keys, actual deployment paths or operational scripts.
+  Keep examples on reserved domains and loopback addresses, not real servers.
+  Ignore rules are an extra safeguard, not a substitute for checking staged
+  files and history before pushing.
 - An ESP32 flash/NVS backup may include credentials even when it looks like
   firmware. Do not upload flash dumps, factory backups or device logs.
 - Use a unique strong website password. Serve the website through HTTPS with
