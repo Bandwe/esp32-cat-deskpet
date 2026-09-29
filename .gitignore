@@ -1,0 +1,46 @@
+# Credentials and local configuration (never commit device NVS / flash dumps).
+.env
+.env.*
+!.env.example
+DeskPetConfig.local.h
+*.local.json
+*.pem
+*.key
+!tools/tests/isrgrootx1_r18.pem
+# Runtime data and personal history.
+backups/
+logs/
+releases/
+data/
+instance/
+*.db
+*.db-*
+*.sqlite*
+*.log
+# Local toolchains / downloaded third-party dependencies.
+.venv*/
+venv/
+vendor/
+.cache/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+# Generated firmware / host test output. STL and STEP are intentional deliverables.
+build*/
+firmware/
+*.bin
+*.elf
+*.map
+*.hex
+*.obj
+*.o
+*.exe
+*.pdb
+*.ilk
+*.zip
+*.tar.gz
+enclosure/**/reference/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,6 @@
+# CAD generation, mesh checks, and actual-model preview rendering.
+cadquery==2.6.1
+trimesh==5.1.0
+networkx==3.7
+Pillow==12.3.0
+vtk==9.3.1

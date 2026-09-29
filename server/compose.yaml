@@ -1,0 +1,15 @@
+services:
+  web:
+    build: .
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      ESP_DB_PATH: /data/esp.sqlite3
+    ports:
+      - "127.0.0.1:8088:8000"
+    volumes:
+      - esp-data:/data
+
+volumes:
+  esp-data:

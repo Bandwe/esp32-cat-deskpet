@@ -1,0 +1,8 @@
+* text=auto
+*.png binary
+*.otf binary
+*.stl binary
+*.step text eol=lf
+*.py text eol=lf
+*.sh text eol=lf
+*.yml text eol=lf

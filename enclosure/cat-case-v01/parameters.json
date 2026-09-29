@@ -1,0 +1,71 @@
+{
+  "glass_width": 33.13,
+  "glass_height": 41.13,
+  "glass_center_raw_y": -1.273,
+  "glass_front_raw_z": 3.8,
+  "glass_recess": 0.8,
+  "radial_clearance": 0.35,
+  "body_width": 42.4,
+  "body_height": 50.4,
+  "body_radius": 8.0,
+  "body_depth": 13.0,
+  "lid_thickness": 1.8,
+  "window_overlap": 0.7,
+  "screw_pilot_diameter": 1.7,
+  "screw_clearance_diameter": 2.3,
+  "screw_head_diameter": 4.5,
+  "screw_positions": [
+    [
+      -18.9,
+      16.0
+    ],
+    [
+      18.9,
+      16.0
+    ],
+    [
+      -18.9,
+      -16.0
+    ],
+    [
+      18.9,
+      -16.0
+    ]
+  ],
+  "board_pad_positions": [
+    [
+      -12.8,
+      14.5,
+      0.8
+    ],
+    [
+      11.5,
+      16.4,
+      1.2
+    ],
+    [
+      -11.5,
+      -17.0,
+      1.0
+    ],
+    [
+      11.5,
+      -16.4,
+      1.2
+    ]
+  ],
+  "pad_top_z": -7.55,
+  "soft_pad_nominal_thickness": 0.5,
+  "usb_center_y": 0.258,
+  "usb_center_z": -8.37,
+  "usb_opening_y": 13.0,
+  "usb_opening_z": 7.0,
+  "button_y": [
+    9.3381,
+    0.4266,
+    -8.4844
+  ],
+  "button_center_z": -7.8,
+  "button_opening_y": 6.6,
+  "button_opening_z": 4.8
+}

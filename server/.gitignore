@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+data/
+*.sqlite*
+*.db
+*.log
+*.pem
+*.key
+*.pfx
+*.tar*
+*.zip
+preview/

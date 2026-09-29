@@ -1,0 +1,91 @@
+{
+  "parts": {
+    "body": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_parts": 1,
+      "bounds_mm": [
+        [
+          -21.2,
+          -31.683,
+          -0.0
+        ],
+        [
+          21.2,
+          25.2,
+          13.0
+        ]
+      ],
+      "dimensions_mm": [
+        42.4,
+        56.883,
+        13.0
+      ],
+      "volume_mm3": 9396.15,
+      "triangles": 33988,
+      "cad_valid": true,
+      "cad_solid_count": 1
+    },
+    "lid": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_parts": 1,
+      "bounds_mm": [
+        [
+          -21.2,
+          -25.2,
+          -0.0
+        ],
+        [
+          21.2,
+          25.2,
+          7.25
+        ]
+      ],
+      "dimensions_mm": [
+        42.4,
+        50.4,
+        7.25
+      ],
+      "volume_mm3": 3970.49,
+      "triangles": 26228,
+      "cad_valid": true,
+      "cad_solid_count": 1
+    },
+    "stand": {
+      "watertight": true,
+      "winding_consistent": true,
+      "connected_parts": 1,
+      "bounds_mm": [
+        [
+          -18.0,
+          -7.0,
+          -0.0
+        ],
+        [
+          18.0,
+          21.0,
+          8.0
+        ]
+      ],
+      "dimensions_mm": [
+        36.0,
+        28.0,
+        8.0
+      ],
+      "volume_mm3": 3749.14,
+      "triangles": 1580,
+      "cad_valid": true,
+      "cad_solid_count": 1
+    }
+  },
+  "intersections": {
+    "body_lid": 0.0,
+    "body_stand": 0.0,
+    "lid_stand": 0.0,
+    "body_board": [],
+    "lid_board": []
+  },
+  "physical_fit_tested": false,
+  "reference": "Waveshare official STEP, 2024-06-06"
+}

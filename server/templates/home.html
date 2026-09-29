@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>桌宠留言 · BANDWE ESP</title>
+  <link rel="icon" type="image/svg+xml" href="{{ url_for('static', filename='favicon.svg') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <script src="{{ url_for('static', filename='app.js') }}" defer></script>
+</head>
+<body data-csrf="{{ csrf }}">
+  <div class="app-shell">
+    <header class="app-header">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span></span><span></span></div>
+        <div><p class="eyebrow">BANDWE · ESP</p><h1>给桌宠留句话</h1></div>
+      </div>
+      <form method="post" action="{{ url_for('logout') }}">
+        <input type="hidden" name="csrf" value="{{ csrf }}">
+        <button type="submit" class="text-button">退出</button>
+      </form>
+    </header>
+
+    <main>
+      <div class="workspace">
+        <section class="compose-panel" aria-labelledby="compose-title">
+          <div class="section-head"><h2 id="compose-title">写一条新留言</h2><span id="char-count">0 / 80</span></div>
+          <label class="sr-only" for="message">留言内容</label>
+          <textarea id="message" spellcheck="false" placeholder="今天想对它说什么？">{{ status.message }}</textarea>
+          <p class="help">最多 80 个字符，支持中文和换行。屏幕会自动弹出，并一直显示到轻点返回。</p>
+          <div class="compose-actions">
+            <button type="button" id="send" class="primary">发送到桌宠 <span aria-hidden="true">↗</span></button>
+            <span id="action-message" role="status" aria-live="polite"></span>
+          </div>
+          <div class="status-panel" aria-label="设备状态">
+            <div class="status-line"><span class="status-label">设备连接</span><span id="connection" class="status-value"><i class="status-dot"></i>正在检查</span></div>
+            <div class="status-line"><span class="status-label">最新留言</span><span id="delivery" class="status-value">正在检查</span></div>
+            <div class="status-line"><span class="status-label">最后联系</span><span id="last-seen" class="status-value">—</span></div>
+          </div>
+        </section>
+
+        <section class="preview-panel" aria-labelledby="preview-title">
+          <div class="section-head"><h2 id="preview-title">屏幕预览</h2><span>240 × 280</span></div>
+          <div class="screen-frame"><img id="preview" width="240" height="280" alt="桌宠屏幕的逐像素留言预览" src="{{ url_for('current_preview') }}"></div>
+          <p class="preview-note">预览由发送给设备的同一份 4 位灰度图生成。</p>
+        </section>
+      </div>
+
+      <section class="key-panel" aria-labelledby="key-title">
+        <div><p class="eyebrow">连接桌宠 · V02</p><h2 id="key-title">用 8 位数字配对</h2>
+          <p class="muted">先在桌宠上连接 2.4 GHz Wi‑Fi，再在桌宠屏幕输入这里生成的配对码。不需要在小屏幕键入长密钥；服务域名已内置。</p>
+        </div>
+        <button type="button" id="make-pair-code" class="primary">生成配对码</button>
+        <div id="pair-code-result" class="pair-code-result" hidden>
+          <div><span class="pair-caption">在桌宠屏幕输入</span><code id="pair-code" aria-label="8 位配对码"></code></div>
+          <span id="pair-countdown" class="pair-countdown">10:00</span>
+          <p class="pair-note">仅显示这一次 · 10 分钟有效 · 5 次错误输入后需重新生成</p>
+        </div>
+        <p id="pair-status" class="muted pair-status" role="status" aria-live="polite"></p>
+        <details class="manual-panel">
+          <summary>高级方式：手动设备密钥</summary>
+          <p class="muted">旧版配网仍可使用长密钥。重新生成长密钥会让原设备密钥和当前配对码失效。</p>
+          <button type="button" id="rotate-key" class="secondary">{{ '重新生成密钥' if status.tokenConfigured else '生成设备密钥' }}</button>
+          <div id="key-result" class="key-result" hidden>
+            <p class="key-warning">立即复制保存；关闭页面后无法再次查看。</p>
+            <code id="device-token"></code>
+            <button type="button" id="copy-key" class="secondary">复制</button>
+          </div>
+        </details>
+      </section>
+    </main>
+    <footer>只有最新一条会同步到设备 · 独立 V02 站点</footer>
+  </div>
+</body>
+</html>

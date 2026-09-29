@@ -1,0 +1,11 @@
+*
+!Dockerfile
+!requirements.txt
+!app.py
+!card_renderer.py
+!templates/
+!templates/**
+!static/
+!static/**
+!fonts/
+!fonts/**

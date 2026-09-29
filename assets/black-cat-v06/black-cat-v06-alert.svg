@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="280" viewBox="0 0 240 280" fill="none">
+  <title>Black kitten — V06 alert</title>
+  <desc>Simple cat-eye expression on pure black. Flat golden irises, black pupils and one white highlight per open eye. No iris texture, gradients, rim strokes, secondary highlights or tongue crease. Expression silhouettes retained from V05. Eyes only; no mouth or tongue. Static vector preview, not firmware.</desc>
+  <defs>
+  <clipPath id="focus-left"><path d="M-25-10Q-19-24-4-21Q16-16 25 1Q17 23-3 23Q-25 20-25-10Z"/></clipPath>
+  <clipPath id="focus-right"><path d="M25-10Q19-24 4-21Q-16-16-25 1Q-17 23 3 23Q25 20 25-10Z"/></clipPath>
+</defs>
+  <rect id="background" width="240" height="280" fill="#000000"/>
+  <g id="eye-left" transform="translate(68 140)">
+    <g clip-path="url(#focus-left)">
+      <ellipse id="iris-left" rx="25.5" ry="26.5" fill="#FFDA7B"/>
+      <path id="pupil-left" d="M0-23C-9-10-8 11 0 23C8 11 9-10 0-23Z" fill="#000000"/>
+      <circle id="catchlight-left" cx="-3.2" cy="-10" r="4" fill="#FFFFFF"/>
+    </g>
+  </g>
+  <g id="eye-right" transform="translate(172 140)">
+    <g clip-path="url(#focus-right)">
+      <ellipse id="iris-right" rx="25.5" ry="26.5" fill="#FFDA7B"/>
+      <path id="pupil-right" d="M0-23C-9-10-8 11 0 23C8 11 9-10 0-23Z" fill="#000000"/>
+      <circle id="catchlight-right" cx="-3.2" cy="-10" r="4" fill="#FFFFFF"/>
+    </g>
+  </g>
+  
+</svg>
